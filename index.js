@@ -1,6 +1,6 @@
 const personForm = document.querySelector('form')
 
-personForm.onsubmit = (ev) => {
+const handleSubmit = (ev) => {
   ev.preventDefault()
   const form = ev.target
   const details = document.querySelector('.details')
@@ -39,3 +39,5 @@ personForm.onsubmit = (ev) => {
     </ul>
   `
 }
+
+personForm.onsubmit = handleSubmit //no parentheses
