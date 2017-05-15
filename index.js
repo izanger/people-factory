@@ -40,4 +40,4 @@ const handleSubmit = (ev) => {
   `
 }
 
-personForm.onsubmit = handleSubmit //no parentheses
+personForm.addEventListener('submit', handleSubmit)
