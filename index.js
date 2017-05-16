@@ -67,9 +67,22 @@ function addList(addBeneath, form) {
     addBeneath.appendChild(ul)
     for(var i = 0; i < elements.length; i++){
         if(labels[i].nodeName === 'LABEL'){
-            const li = document.createElement('li')
-            li.textContent = labels[i].textContent + ': ' + elements[i].value
+          const li = document.createElement('li')
+      
+          if(labels[i].textContent === "Hair Color"){
+            alert("MADE IT")
+            li.textContent = labels[i].textContent + ': '
             ul.appendChild(li)
+            box = document.createElement('div')
+            box.style.height = '50px'
+            box.style.width = '100px'
+            box.style.backgroundColor = elements[i].value
+            li.appendChild(box)
+            continue
+          }
+
+          li.textContent = labels[i].textContent + ': ' + elements[i].value
+          ul.appendChild(li)
         }
 
     }
