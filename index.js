@@ -68,9 +68,8 @@ function addList(addBeneath, form) {
     for(var i = 0; i < elements.length; i++){
         if(labels[i].nodeName === 'LABEL'){
           const li = document.createElement('li')
-      
+          
           if(labels[i].textContent === "Hair Color"){
-            alert("MADE IT")
             li.textContent = labels[i].textContent + ': '
             ul.appendChild(li)
             box = document.createElement('div')
